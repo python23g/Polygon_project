@@ -14,7 +14,7 @@ class Circle:
         Returns:
             bool: True if the circle is valid, False otherwise
         """
-        pass
+        return False
     
     def diameter(self) -> float:
         '''
