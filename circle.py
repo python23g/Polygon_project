@@ -24,7 +24,7 @@ class Circle:
         Returns:
             float: return diameter of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        return self.radius *2
     
     def circumference(self) -> float:
         '''
