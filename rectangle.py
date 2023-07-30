@@ -12,7 +12,7 @@ class Rectangle:
         Returns: 
             bool: True if the rectangle is valid, False otherwise
         """ 
-        pass
+        return self.a > 0 and self.b > 0 
 
     def perimeter(self) -> float:
         """
@@ -33,3 +33,9 @@ class Rectangle:
             float or int:  return area of the rectangle if the rectangle is valid, 0 otherwise 
         """
         pass
+
+rectangle = Rectangle(1,2)
+is_valid_rectangle = rectangle.is_valid()
+
+
+print(is_valid_rectangle)
