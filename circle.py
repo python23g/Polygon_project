@@ -1,4 +1,4 @@
-from math import pi
+from math import pi, sqrt
 
 
 class Circle:
@@ -6,15 +6,11 @@ class Circle:
         self.radius = radius
         
     def is_valid(self) -> bool:
-        """
-        This method checks if the circle is valid.
-        
-        Args:
-            No
-        Returns:
-            bool: True if the circle is valid, False otherwise
-        """
-        return False
+        if self.radius > 0:
+            return True
+        else:
+
+            return False
     
     def diameter(self) -> float:
         '''
@@ -24,7 +20,10 @@ class Circle:
         Returns:
             float: return diameter of the circle if the circle is valid, 0 otherwise
         '''
-        return self.radius *2
+        if self.is_valid():
+            return self.radius * 2
+        else:
+            return 0
     
     def circumference(self) -> float:
         '''
@@ -34,7 +33,10 @@ class Circle:
         Returns:
             float: return circumference of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        C = 0
+        if self.is_valid:
+            C = self.diameter() * pi
+        return  C
     
     def area(self) -> float:
         '''
@@ -44,4 +46,9 @@ class Circle:
         Returns:
             float: return area of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        a = 0
+        if self.is_valid():
+            a = pi * self.radius**2
+        return a
+
+ccl = Circle(radius=2.00)
