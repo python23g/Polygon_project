@@ -36,6 +36,8 @@ class Rectangle:
         Args:
             No
         Returns:
+
+        
             float or int:  return area of the rectangle if the rectangle is valid, 0 otherwise 
         """
         a = 0

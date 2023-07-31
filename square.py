@@ -5,6 +5,7 @@ class Square:
     
     def is_valid(self) -> bool:
         """
+        
         This method checks if the circle is valid.
         Args:
             No

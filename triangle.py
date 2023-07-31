@@ -7,6 +7,7 @@ class Triangle:
         self.b = b
         self.c = c
 
+
     def is_valid(self) -> bool:
         '''
         This method checks if the triangle is valid.
