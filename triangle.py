@@ -30,8 +30,10 @@ class Triangle:
         '''
         if self.is_valid():
             if self.a == self.b ==self.c:
+                return 'Teng tomonli'
+            elif self.a == self.b or self.a == self.c or self.b == self.c:
                 return 'Teng yonli'
-            if not self.a == self.b ==self.c:
+            else:
                 return 'Turli tomonli'
         
     def perimeter(self) -> float:

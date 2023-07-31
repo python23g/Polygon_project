@@ -12,7 +12,7 @@ class Rectangle:
         Returns: 
             bool: True if the rectangle is valid, False otherwise
         """ 
-        if self.a and self.b > 0:
+        if self.a > 0 and self.b > 0:
             return True
         else:
             return False
@@ -27,7 +27,7 @@ class Rectangle:
         """
         p = 0
         if self.is_valid():
-            p = 2*(self.a * self.b)
+            p = 2*(self.a + self.b)
         return p
 
     def area(self) -> float:
