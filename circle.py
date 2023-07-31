@@ -14,7 +14,7 @@ class Circle:
         Returns:
             bool: True if the circle is valid, False otherwise
         """
-        return False
+        return self.radius > 0 
     
     def diameter(self) -> float:
         '''
@@ -24,7 +24,9 @@ class Circle:
         Returns:
             float: return diameter of the circle if the circle is valid, 0 otherwise
         '''
-        return self.radius *2
+        if self.is_valid():
+            return 2 * self.radius
+        return 0
     
     def circumference(self) -> float:
         '''
@@ -34,7 +36,10 @@ class Circle:
         Returns:
             float: return circumference of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        f = 0
+        if self.is_valid():
+            f = self.diameter() * pi 
+        return f
     
     def area(self) -> float:
         '''
@@ -44,4 +49,18 @@ class Circle:
         Returns:
             float: return area of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        f = 0 
+        if self.is_valid():
+            f = pi * self.radius ** 2 
+        return f
+
+circle = Circle(9)
+is_valid_circle = circle.is_valid()
+circle_diameter = circle.diameter()
+circle_circumference = circle.circumference()
+circle_area = circle.area()
+
+print(is_valid_circle)
+print(circle.diameter)
+print(circle_circumference)
+print(circle_area)
