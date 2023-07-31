@@ -12,7 +12,10 @@ class Rectangle:
         Returns: 
             bool: True if the rectangle is valid, False otherwise
         """ 
-        pass
+        if self.a and self.b > 0:
+            return True
+        else:
+            return False
 
     def perimeter(self) -> float:
         """
@@ -22,7 +25,10 @@ class Rectangle:
         Returns:
             float or int: return perimeter of the rectangle if the rectangle is valid, 0 otherwise
         """
-        pass
+        p = 0
+        if self.is_valid():
+            p = 2*(self.a * self.b)
+        return p
 
     def area(self) -> float:
         """
@@ -30,6 +36,15 @@ class Rectangle:
         Args:
             No
         Returns:
+
+        
             float or int:  return area of the rectangle if the rectangle is valid, 0 otherwise 
         """
-        pass
+        a = 0
+        if self.is_valid():
+            a = self.a * self.b
+        return a
+
+rct = Rectangle(4.00, 2.00)
+
+print(rct.area())
