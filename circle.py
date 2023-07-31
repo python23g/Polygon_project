@@ -6,6 +6,7 @@ class Circle:
         self.radius = radius
         
     def is_valid(self) -> bool:
+
         """
         This method checks if the circle is valid.
         
@@ -14,7 +15,8 @@ class Circle:
         Returns:
             bool: True if the circle is valid, False otherwise
         """
-        return False
+        return  self.radius > 0
+        
     
     def diameter(self) -> float:
         '''
@@ -34,7 +36,7 @@ class Circle:
         Returns:
             float: return circumference of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        return self.radius *2*pi
     
     def area(self) -> float:
         '''
@@ -44,4 +46,11 @@ class Circle:
         Returns:
             float: return area of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        return self.radius **2* pi
+    
+
+r = Circle(5)
+print(r.is_valid())
+print(r.diameter())
+print(r.circumference())
+print(r.area())
