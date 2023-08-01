@@ -54,7 +54,7 @@ class Circle:
             f = pi * self.radius ** 2 
         return f
 
-circle = Circle(9)
+circle = Circle(33432)
 is_valid_circle = circle.is_valid()
 circle_diameter = circle.diameter()
 circle_circumference = circle.circumference()
